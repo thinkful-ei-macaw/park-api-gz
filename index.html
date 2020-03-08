@@ -9,25 +9,27 @@
 </head>
 
 <body>
-  <div class="container">
+  <section id="search-form">
     <h1>National Park Finder</h1>
 
     <form id="js-form">
-      <label for="search-term">Search term</label>
+      <label for="js-search-term">Search term</label>
       <input type="text" name="search-term" id="js-search-term" required /><br />
 
-      <label for="max-results">Maximum results to return</label>
-      <input type="input" name="max-results" id="js-max-results" value="10" placeholder="Choose a # up to 50" />
-
-      <input type="submit" value="Go!" />
+      <div id="results-return">
+        <label for="js-max-results">Maximum results to return</label>
+        <input type="input" name="max-results" id="js-max-results" value="10" placeholder="Choose a # up to 50" />
+      </div>
+      <input id="submit-btn" type="submit" value="Go!" />
     </form>
+  </section>
 
-    <p id="js-error-message" class="error-message"></p>
-    <section id="results" class="hidden">
-      <h2>Search results</h2>
-      <ul id="results-list"></ul>
-    </section>
-  </div>
+  <p id="js-error-message" class="error-message"></p>
+  <section id="results" class="hidden">
+    <h2>Search results</h2>
+    <ul id="results-list"></ul>
+  </section>
+
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="script.js"></script>

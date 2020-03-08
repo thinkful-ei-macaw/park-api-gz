@@ -56,8 +56,8 @@ function getNationalParks(query, limit = 10) {
 function watchForm() {
   $("form").submit(event => {
     event.preventDefault();
-    const searchTerm = $("#js-search-term").val();
-    const limit = $("#js-max-results").val();
+    let searchTerm = $("#js-search-term").val();
+    let limit = $("#js-max-results").val();
     getNationalParks(searchTerm, limit);
   });
 }

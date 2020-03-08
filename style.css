@@ -1,0 +1,40 @@
+body {
+    background-image: url(park.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: 2em;  
+}
+
+#submit-btn {
+
+    padding: 1em;
+
+}
+
+#search-form {
+    text-align: center;
+}
+
+#results-return {
+
+ padding: 1em 6em 1em 0;
+
+}
+
+#results-list {
+    list-style: none;
+}
+
+h2 {
+    padding-left: 1em;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: orange;
+}
+
