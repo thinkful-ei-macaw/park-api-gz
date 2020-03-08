@@ -6,6 +6,22 @@
 const apiKey = '3NwXdZKjnZLoycAgxeaQsA6gX80531cABZRyOq1Y';
 const searchURL = "https://developer.nps.gov/api/v1/parks";
 
+let loopArr = () => {
+
+  const arrItem = [{ name: 'Alex', status: 'kick ass' }, { name: 'John', status: 'Bottom one screw' }]
+
+  for (let i = 0; i < arrItem.length; i++) {
+
+    console.log(arrItem[i].name)
+
+  }
+
+
+}
+
+
+
+
 function formatQueryParams(params) {
   const queryItems = Object.keys(params).map(
     key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
@@ -20,6 +36,8 @@ function displayResults(responseJson) {
     $("#results-list").append(
       `<li><h3>${responseJson.data[i].fullName}</h3><br>
       <h4>${responseJson.data[i].states}</h4>
+      <h4>City: ${responseJson.data[i].addresses[i].city}</h4>
+      <h4>Postalcode: ${responseJson.data[i].addresses[i].postalCode}</h4>
       <p>${responseJson.data[i].description}</p><br>
       <a href="${responseJson.data[i].url}">Click Here to Visit Website</p>
       </li>`
@@ -63,3 +81,5 @@ function watchForm() {
 }
 
 $(watchForm);
+
+$(loopArr)
